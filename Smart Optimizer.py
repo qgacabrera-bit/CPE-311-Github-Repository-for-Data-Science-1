@@ -12,9 +12,9 @@ from PyQt5.QtCore import Qt
 INF = float("inf")
 
 
-# -------------------------------
+
 # Core Algorithm
-# -------------------------------
+
 
 class Appliance:
     def __init__(self, name, power, duration, start, end):
@@ -90,9 +90,9 @@ class EnergyScheduler:
         return dp(0, start_remaining), schedule
 
 
-# -------------------------------
+
 # GUI
-# -------------------------------
+
 
 class EnergyGUI(QWidget):
     def __init__(self):
@@ -272,10 +272,8 @@ class EnergyGUI(QWidget):
             QMessageBox.critical(self, "Error", str(e))
 
 
-# -------------------------------
-# Run App
-# -------------------------------
 
+# Run App
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = EnergyGUI()
